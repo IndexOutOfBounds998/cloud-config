@@ -12,7 +12,7 @@ spring:
           lowerCaseServiceId: true
       routes:
       - id: user-service
-        uri:"http://user-consumer:8010"
+        uri: http://ityouknow.com
         order: 0
         predicates:
           - Path=/customer/** 
