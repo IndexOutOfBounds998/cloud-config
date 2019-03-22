@@ -11,12 +11,10 @@ spring:
           enabled: true
           lowerCaseServiceId: true
       routes:
-      - id: USER-CONSUMER
+      - id: user-service
         uri: lb://USER-CONSUMER
         predicates:
           - Path=/demo/**
-        filters:
-          - StripPrefix=1
           
 eureka:
   client:
