@@ -13,8 +13,6 @@ spring:
       routes:
       - id: user-service
         uri: lb://USER-CONSUMER
-        predicates:
-          - Path=/hello/**
           
 eureka:
   client:
