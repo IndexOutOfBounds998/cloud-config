@@ -11,7 +11,7 @@ spring:
           enabled: true
           lowerCaseServiceId: true
       routes:
-      - id: user-consumer
+      - id: USER-CONSUMER
         uri: lb://USER-CONSUMER
         predicates:
           - Path=/demo/**
