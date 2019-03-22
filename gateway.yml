@@ -13,7 +13,9 @@ spring:
       routes:
       - id: user-service
         uri: lb://USER-CONSUMER
-          
+        order: 0
+        predicates:
+          - Path=/customer/**  
 eureka:
   client:
     service-url:
