@@ -12,10 +12,12 @@ spring:
           lowerCaseServiceId: true
       routes:
       - id: user-service
-        uri: lb://USER-CONSUMER
+        uri:"http://user-consumer:8010"
         order: 0
         predicates:
-          - Path=/customer/**  
+          - Path=/customer/** 
+        filters:
+          - StripPrefix=1
 eureka:
   client:
     service-url:
