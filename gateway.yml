@@ -3,13 +3,20 @@ server:
 
 spring:
   application:
-    name: sc-gateway-service
+    name: gateway-server
   cloud:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: false
           lowerCaseServiceId: true
+      routes:
+      - id: user-consumer
+        uri: lb://USER-CONSUMER
+        predicates:
+          - Path=/demo/**
+        filters:
+          - StripPrefix=1
           
 eureka:
   client:
