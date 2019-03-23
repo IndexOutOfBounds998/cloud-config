@@ -1,5 +1,5 @@
 server:
-  port: 8010
+  port: 8011
 #注册到注册中心
 eureka:
   client:
